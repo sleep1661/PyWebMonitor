@@ -33,10 +33,15 @@ export WM_MAIL_PASSWORD="******"
 ```
  
 ## 依赖库
-* SSL
+* openSSL
+ * [openssl安装说明](http://elliott-shi.iteye.com/blog/1955408) 
 * APScheduler
 * gevent
-
+ * 安装APScheduler和gevent
+ ```
+ easy_install APScheduler
+ easy_install gevent
+ ```
 
 #部署运行
 你可以跟我一样把它部署在亚马逊aws上运行，运行命令：```python monitor.py```
