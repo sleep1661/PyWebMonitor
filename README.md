@@ -24,16 +24,17 @@
 * ```interval_seconds```  监控间隔时间（单位：秒）
 
 ## 环境
-  python版本：2.7.9
-
+ python版本：2.7.9
+ 
 ## 依赖库
 * SSL
 * APScheduler
 * gevent
 
-## 运行
-  ```python monitor.py```
-  
+
+#部署运行
+你可以跟我一样把它部署在亚马逊aws上运行，运行命令：```python monitor.py```
+   
 ##有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
