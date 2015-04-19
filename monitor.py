@@ -14,17 +14,17 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 
 def send_mail(web):
-	sender = 'pywebmonitor@126.com'
+	sender = os.environ['WM_MAIL_SENDER']
 	receiver = web[watchweb.MAIL_RECEIVER]
 	subject = web[watchweb.MAIL_MSG]
-	smtpserver = 'smtp.126.com'
-	username = 'pywebmonitor'
-	password = 'test1234'
+	smtpserver = os.environ['WM_MAIL_SMTPSERVER']
+	username = os.environ['WM_MAIL_USERNAME']
+	password = os.environ['WM_MAIL_PASSWORD']
 	msg = MIMEText('<html><h1>%s</h1></html>'% subject,'html','utf-8') 
 	msg['Subject'] = Header(subject, 'utf-8')
 
 	smtp = smtplib.SMTP()
-	smtp.connect('smtp.126.com')
+	smtp.connect(smtpserver)
 	smtp.login(username, password)
 	smtp.sendmail(sender, receiver, msg.as_string())
 	smtp.quit()
