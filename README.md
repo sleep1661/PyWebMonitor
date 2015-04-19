@@ -24,7 +24,14 @@
 * ```interval_seconds```  监控间隔时间（单位：秒）
 
 ## 环境
- python版本：2.7.9
+* python版本 2.7.9
+* 设置环境变量--发送人、邮箱服务、账户以及密码
+```
+export WM_MAIL_SENDER="pywebmonitor@126.com"
+export WM_MAIL_SMTPSERVER="smtp.126.com"
+export WM_MAIL_USERNAME="pywebmonitor"
+export WM_MAIL_PASSWORD="******"
+```
  
 ## 依赖库
 * SSL
