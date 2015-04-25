@@ -32,8 +32,7 @@ def send_mail(web):
 
 def check_web(**web):
 	data = urllib.urlopen(web[watchweb.URL]).read()
-	#print web
-	r = re.compile(web[watchweb.REGEX])
+	r = re.compile(web[watchweb.REGEX].encode('utf-8'))
 	infos = r.findall(data)
 	for info in infos:
 		if eval(web[watchweb.CONDITION]):

@@ -1,4 +1,5 @@
 import ConfigParser
+import codecs
 
 URL = 'url'
 REGEX = 'regex'
@@ -10,7 +11,7 @@ WATCH_WEBS = 'watchweb.ini'
 
 def get_watch_webs():
 	config = ConfigParser.ConfigParser()
-	config.read(WATCH_WEBS)
+	config.readfp(codecs.open(WATCH_WEBS, "r", encoding='utf-8'))
 	return [dict(config.items(section)) for section in config.sections()]
 
 
